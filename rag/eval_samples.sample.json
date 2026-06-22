@@ -1,0 +1,18 @@
+[
+  {
+    "tenant_id": "demo-tenant",
+    "eRep_id": "demo-agent",
+    "question": "What is the return policy?",
+    "expected_context_keywords": ["return", "30 days", "proof of purchase"],
+    "method": "basic",
+    "backend": "both"
+  },
+  {
+    "tenant_id": "demo-tenant",
+    "eRep_id": "demo-agent",
+    "question": "How do I reset my password?",
+    "expected_context_keywords": ["reset", "password", "account settings"],
+    "method": "basic",
+    "backend": "both"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Our return policy allows returns within 30 days with proof of purchase.",
+    "metadata": {"source": "policies.txt", "chunk_index": 0}
+  },
+  {
+    "content": "To reset your password, go to the account settings page and follow the reset link.",
+    "metadata": {"source": "support.txt", "chunk_index": 0}
+  },
+  {
+    "content": "Shipping is free on orders above $50.",
+    "metadata": {"source": "shipping.txt", "chunk_index": 0}
+  }
+]
