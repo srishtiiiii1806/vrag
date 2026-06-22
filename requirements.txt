@@ -1,0 +1,30 @@
+# -------- Web framework --------
+fastapi
+uvicorn[standard]
+python-multipart      
+python-dotenv
+
+# -------- Logging --------
+loguru
+
+# -------- Database / Auth --------
+pymongo
+python-jose[cryptography]   
+passlib[bcrypt]              
+
+# -------- LLM / RAG (vectorless) --------
+openai
+langchain
+langchain-core
+langchain-community
+langchain-ollama
+langchain-openai
+langchain-text-splitters     
+rank-bm25                
+flashrank                
+pydantic-settings
+# -------- Document parsing (used in main.py + embed/create_chunks.py) --------
+python-docx               
+pypdf
+openpyxl                  
+aiofiles
