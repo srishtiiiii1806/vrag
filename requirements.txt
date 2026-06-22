@@ -28,3 +28,5 @@ python-docx
 pypdf
 openpyxl                  
 aiofiles
+Pillow
+pytesseract

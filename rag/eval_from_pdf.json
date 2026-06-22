@@ -1,0 +1,9 @@
+[
+  {
+    "tenant_id": "uploaded-tenant",
+    "eRep_id": "meditations",
+    "question": "Marcus Aurelius' Meditations - tr",
+    "expected_context": "Marcus Aurelius' Meditations - tr. Casaubon v. 8.16, uploaded to www.philaletheians.co.uk, 14 July 2013 \nPage 1 of 128 \nThe meditations of \nMarcus Aurelius Antoninus \nOriginally translated by Meric Casaubon \n \nAbout this edition \nMarcus Aurelius Antoninus Augustus was Emperor of Rome from 161 to his death, \nthe last of the “Five Good Emperors.” He was nephew, son-in-law, and adoptive son \nof Antonius Pius. Marcus Aurelius was one of the most important Stoic philosophers, \ncited by H.P. Blavatsky amongst famous classic sages and writers such as Plato, Eu-\nripides, Socrates, Aristophanes, Pindar, Plutarch, Isocrates, Diodorus, Cicero, and \nEpictetus.1 \nThis edition was originally translated out of the Greek by Meric Casaubon in 1634 as \n“The Golden Book of Marcus Aurelius,” with an Introduction by W.H.D. Rouse. It was \nsubsequently edited by Ernest Rhys. London: J.M. Dent & Co; New York: E.P. Dutton \n& Co, 1906; Everyman’s Library.",
+    "backend": "both"
+  }
+]

@@ -7,8 +7,10 @@ from docx import Document as DocxDocument
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from loguru import logger
 from pypdf import PdfReader
+from PIL import Image
+import pytesseract
 
-SUPPORTED_EXTENSIONS = {".docx", ".pdf", ".xlsx"}
+SUPPORTED_EXTENSIONS = {".docx", ".pdf", ".xlsx", ".jpg", ".jpeg", ".png"}
 
 # Plain character-based splitting -- no embedding model needed.
 CHUNK_SIZE = 1000
@@ -101,10 +103,37 @@ def _build_records_for_file(
                     }
                 )
 
+    elif extension in {".jpg", ".jpeg", ".png"}:
+        try:
+            text = _extract_image_text(file_path)
+            for idx, chunk in enumerate(splitter.split_text(text)):
+                records.append(
+                    {
+                        "content": chunk,
+                        "metadata": {
+                            "source": file_name,
+                            "image": file_name,
+                            "chunk_index": idx,
+                        },
+                    }
+                )
+        except Exception:
+            logger.warning(f"Failed to extract text from image: {file_name}")
+
     else:
         logger.warning(f"Skipping unsupported file type: {file_name}")
 
     return records
+
+
+def _extract_image_text(file_path: Path) -> str:
+    """Read an image file and return OCR-extracted text."""
+    try:
+        with Image.open(str(file_path)) as img:
+            text = pytesseract.image_to_string(img)
+            return text or ""
+    except Exception:
+        return ""
 
 
 def create_chunk_store(folder_path: List[str], save_path: str) -> int:
